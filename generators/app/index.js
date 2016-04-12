@@ -36,6 +36,7 @@ module.exports = module.exports = generators.Base.extend({
         '.scripts/publish_storybook.sh',
         '.scripts/user/prepublish.sh',
         '.scripts/user/pretest.js',
+        '.storybook/user/modify_webpack_config.js',
       ].forEach(function(fileName) {
         self.fs.copy(
           self.templatePath(fileName),
