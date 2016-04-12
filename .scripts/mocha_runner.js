@@ -4,7 +4,7 @@ require('babel-polyfill');
 // Add jsdom support, which is required for enzyme.
 var jsdom = require('jsdom').jsdom;
 
-var exposedProperties = [ 'window', 'navigator', 'document' ];
+var exposedProperties = ['window', 'navigator', 'document'];
 
 global.document = jsdom('');
 global.window = document.defaultView;
