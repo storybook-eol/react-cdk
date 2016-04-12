@@ -46,7 +46,8 @@
 
     "@kadira/storybook": "^1.10.2",
     "style-loader": "^0.13.1",
-    "raw-loader": "^0.5.1"
+    "raw-loader": "^0.5.1",
+    "git-url-parse": "^6.0.1"
   },
   "peerDependencies": {
     "react": "^0.14.7 || ^15.0.0"

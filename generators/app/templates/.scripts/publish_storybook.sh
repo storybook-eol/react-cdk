@@ -35,6 +35,7 @@ git commit -m "Deploy Storybook to GitHub Pages"
 # /dev/null to hide any sensitive credential data that might otherwise be exposed.
 git push --force --quiet $GIT_URL master:gh-pages > /dev/null 2>&1
 rm -rf .out
+cd ..
 
 echo ""
-echo "=> Storybook deployed to GitHub pages"
+echo "=> Storybook deployed to: `node .scripts/get_gh_pages_url.js $GIT_URL`"
