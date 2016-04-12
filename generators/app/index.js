@@ -89,5 +89,19 @@ module.exports = module.exports = generators.Base.extend({
         );
       });
     }
+  },
+
+  end: {
+    logMessage: function() {
+      this.log('');
+      this.log('Awesome! Your component "' + this.prettyComponentName + '" is ready!');
+      this.log('Apply following commands to install dependencies.');
+      this.log('');
+      this.log(' cd ' + this.componentName);
+      this.log(' npm install');
+      this.log('');
+      this.log('Refer CONTRIBUTING.md and start building your awesome component.');
+      this.log('');
+    }
   }
 });
