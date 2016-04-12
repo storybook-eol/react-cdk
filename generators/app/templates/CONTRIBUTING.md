@@ -6,6 +6,12 @@ We welcome your help to make this component better. This document will help to s
 
 This component has been setup with [React CDK](https://github.com/kadirahq/react-cdk) and help us to focus on the component development.
 
+### QuickStart
+
+* Your component is at `src/index.js`. Open it with an editor.
+* Start React Storybook with: `npm run storybook` (stories at `src/stories/index`).
+* Watch for tests with: `npm run test-watch` (tests at `src/tests`).
+
 ### Source Files
 
 Source files on this project lives under `src` directory and you can write your component using ES2015+. (with babel-preset-stage-2).
@@ -42,3 +48,7 @@ Use these commands to do the linting:
 
 * `npm run lint` - Run eslint
 * `npm run lintfix` - Run eslint with --fix flag
+
+### More Info
+
+To learn about dev setup and configurations, visit the [React CDK](https://github.com/kadirahq/react-cdk) repo.
