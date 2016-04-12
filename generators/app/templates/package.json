@@ -1,10 +1,10 @@
 {
   "name": "<%= name %>",
   "version": "0.0.0",
-  "description": "My React Component",
+  "description": "<%= description %>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/you/repo.git"
+    "url": "<%= githubUrl %>"
   },
   "license": "MIT",
   "scripts": {

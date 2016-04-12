@@ -5,7 +5,19 @@ module.exports = module.exports = generators.Base.extend({
   constructor: function () {
     generators.Base.apply(this, arguments);
     this.argument('componentName', { type: String, required: true });
-    this.prettyComponentName = _.capitalize(this.componentName);
+    this.option('githubUrl', { type: String, desc: "URL of your github repo" });
+    this.option('description', { type: String, desc: "One line description about your component" });
+
+    this.componentName = this.componentName || '';
+    this.prettyComponentName = this.componentName
+      .split('-')
+      .map(function(word) {
+        return _.capitalize(word);
+      })
+      .join(' ');
+
+    this.githubUrl = this.options.githubUrl || 'https://github.com/you/repo.git';
+    this.description = this.options.description || this.prettyComponentName + ' Component';
   },
 
   configuring: {
@@ -32,10 +44,15 @@ module.exports = module.exports = generators.Base.extend({
 
     copyPackageJson: function() {
       var self = this;
+
       self.fs.copyTpl(
         self.templatePath('package.json'),
         self.destinationPath(self.componentName + '/package.json'),
-        { name: self.componentName }
+        {
+          name: self.componentName,
+          description: self.description,
+          githubUrl: self.githubUrl
+        }
       );
     },
 
@@ -44,7 +61,10 @@ module.exports = module.exports = generators.Base.extend({
       self.fs.copyTpl(
         self.templatePath('README.md'),
         self.destinationPath(self.componentName + '/README.md'),
-        { name: self.prettyComponentName }
+        {
+          name: self.prettyComponentName,
+          description: self.description
+        }
       );
 
       self.fs.copyTpl(
