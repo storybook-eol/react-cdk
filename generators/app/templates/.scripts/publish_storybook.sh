@@ -1,4 +1,10 @@
 #!/bin/bash
+
+# IMPORTANT
+# ---------
+# This is an auto generated file with React CDK.
+# Do not modify this file.
+
 set -e # exit with nonzero exit code if anything fails
 
 # get GIT url

@@ -34,6 +34,8 @@ module.exports = module.exports = generators.Base.extend({
         '.scripts/prepublish.sh',
         '.scripts/get_gh_pages_url.js',
         '.scripts/publish_storybook.sh',
+        '.scripts/user/prepublish.sh',
+        '.scripts/user/pretest.js',
       ].forEach(function(fileName) {
         self.fs.copy(
           self.templatePath(fileName),
