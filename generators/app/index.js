@@ -24,7 +24,6 @@ module.exports = module.exports = generators.Base.extend({
     copyDotFiles: function () {
       var self = this;
       [
-        '.babelrc',
         '.eslintrc',
         '.gitignore',
         '.npmignore',
@@ -40,6 +39,8 @@ module.exports = module.exports = generators.Base.extend({
       ].forEach(function (fileName) {
         self.copy(fileName, self.componentName + '/' + fileName);
       });
+
+      self.copy('babelrc', self.componentName + '/.babelrc');
     },
 
     copyPackageJson: function () {
