@@ -72,6 +72,8 @@ module.exports = module.exports = generators.Base.extend({
         self.componentName + '/CONTRIBUTING.md',
         { name: self.prettyComponentName }
       );
+
+      self.copy('LICENSE', self.componentName + '/LICENSE');
     }
   },
 
@@ -97,7 +99,7 @@ module.exports = module.exports = generators.Base.extend({
       this.log(' cd ' + this.componentName);
       this.log(' npm install');
       this.log('');
-      this.log('Refer CONTRIBUTING.md and start building your awesome component.');
+      this.log('Visit https://github.com/kadirahq/react-cdk to get started!');
       this.log('');
     }
   }
