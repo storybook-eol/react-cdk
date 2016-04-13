@@ -6,6 +6,12 @@ module.exports = module.exports = generators.Base.extend({
     generators.Base.apply(this, arguments);
   },
 
+  _updatePackageJsonSection(source, dest, section) {
+    _.each(source[section], function(value, key) {
+      dest[section][key] = value;
+    });
+  },
+
   configuring: {
     updateDotFiles: function() {
       var self = this;
@@ -26,6 +32,15 @@ module.exports = module.exports = generators.Base.extend({
 
     updatePackageJson: function() {
       var self = this;
+      var dest = require(self.destinationPath('package.json'));
+      var source = require(self.templatePath('../../app/templates/package.json'));
+
+      self._updatePackageJsonSection(source, dest, 'devDependencies');
+      self._updatePackageJsonSection(source, dest, 'dependencies');
+      self._updatePackageJsonSection(source, dest, 'peerDependencies');
+      self._updatePackageJsonSection(source, dest, 'scripts');
+
+      self.write(self.destinationPath('package.json'), JSON.stringify(dest, null, 2));
     },
   },
 

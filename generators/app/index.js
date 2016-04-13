@@ -38,19 +38,16 @@ module.exports = module.exports = generators.Base.extend({
         '.scripts/user/pretest.js',
         '.storybook/user/modify_webpack_config.js',
       ].forEach(function(fileName) {
-        self.fs.copy(
-          self.templatePath(fileName),
-          self.destinationPath(self.componentName + '/' + fileName)
-        );
+        self.copy(fileName, self.componentName + '/' + fileName);
       });
     },
 
     copyPackageJson: function() {
       var self = this;
 
-      self.fs.copyTpl(
-        self.templatePath('package.json'),
-        self.destinationPath(self.componentName + '/package.json'),
+      self.template(
+        'package.json',
+        self.componentName + '/package.json',
         {
           name: self.componentName,
           description: self.description,
@@ -61,18 +58,18 @@ module.exports = module.exports = generators.Base.extend({
 
     copyOtherFiles: function() {
       var self = this;
-      self.fs.copyTpl(
-        self.templatePath('README.md'),
-        self.destinationPath(self.componentName + '/README.md'),
+      self.template(
+        'README.md',
+        self.componentName + '/README.md',
         {
           name: self.prettyComponentName,
           description: self.description
         }
       );
 
-      self.fs.copyTpl(
-        self.templatePath('CONTRIBUTING.md'),
-        self.destinationPath(self.componentName + '/CONTRIBUTING.md'),
+      self.template(
+        'CONTRIBUTING.md',
+        self.componentName + '/CONTRIBUTING.md',
         { name: self.prettyComponentName }
       );
     }
@@ -86,10 +83,7 @@ module.exports = module.exports = generators.Base.extend({
         'src/stories/index.js',
         'src/tests/index.js'
       ].forEach(function(fileName) {
-        self.fs.copy(
-          self.templatePath(fileName),
-          self.destinationPath(self.componentName + '/' + fileName)
-        );
+        self.copy(fileName, self.componentName + '/' + fileName);
       });
     }
   },
