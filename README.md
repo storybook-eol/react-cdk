@@ -17,6 +17,18 @@ React CDK comes with following features:
 * Deploy your storybook to GitHub Pages.
 * Get **updates** to core building tools.
 
+## TOC
+
+* [Getting Started](#getting-started)
+* [Developing Your Component](#developing-your-component)
+* [Testing](#testing)
+* [Lint Rules](#lint-rules)
+* [Publishing](#publishing)
+* [Deploying Storybook](#deploying-storybook)
+* [CSS and Styles](#css-and-styles)
+* [Updating Your Component with React CDK](#updating-your-component-with-react-cdk)
+* [Customizing the Component](#customizing-the-component)
+
 ## Getting Started
 
 Install React CDK with the following command:
@@ -131,7 +143,7 @@ Here’s a [sample component](https://github.com/kadira-samples/react-button) li
 }
 ```
 
-## **CSS and Styles**
+## CSS and Styles
 
 It’s common to include CSS and Styles with your component. There are many ways to do this. Some prefer to write CSS in JS, while some provide a CSS file that lives inside the repo.
 
