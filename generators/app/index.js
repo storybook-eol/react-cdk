@@ -21,12 +21,21 @@ module.exports = module.exports = generators.Base.extend({
   },
 
   configuring: {
-    copyDotFiles: function () {
+    copyDotFiles: function() {
       var self = this;
       [
-        '.eslintrc',
-        '.gitignore',
-        '.npmignore',
+        'babelrc',
+        'eslintrc',
+        'gitignore',
+        'npmignore'
+      ].forEach(function (fileName) {
+        self.copy(fileName, self.componentName + '/.' + fileName);
+      });
+    },
+
+    copyCoreFiles: function () {
+      var self = this;
+      [
         '.storybook/config.js',
         '.storybook/webpack.config.js',
         '.scripts/mocha_runner.js',
@@ -39,8 +48,6 @@ module.exports = module.exports = generators.Base.extend({
       ].forEach(function (fileName) {
         self.copy(fileName, self.componentName + '/' + fileName);
       });
-
-      self.copy('babelrc', self.componentName + '/.babelrc');
     },
 
     copyPackageJson: function () {
