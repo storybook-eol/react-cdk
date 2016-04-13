@@ -6,14 +6,15 @@ module.exports = module.exports = generators.Base.extend({
     generators.Base.apply(this, arguments);
   },
 
-  _updatePackageJsonSection(source, dest, section) {
-    _.each(source[section], function(value, key) {
-      dest[section][key] = value;
+  _updatePackageJsonSection: function (source, dest, section) {
+    var newDest = dest;
+    _.each(source[section], function (value, key) {
+      newDest[section][key] = value;
     });
   },
 
   configuring: {
-    updateDotFiles: function() {
+    updateDotFiles: function () {
       var self = this;
       [
         '.storybook/config.js',
@@ -21,8 +22,8 @@ module.exports = module.exports = generators.Base.extend({
         '.scripts/mocha_runner.js',
         '.scripts/prepublish.sh',
         '.scripts/get_gh_pages_url.js',
-        '.scripts/publish_storybook.sh',
-      ].forEach(function(fileName) {
+        '.scripts/publish_storybook.sh'
+      ].forEach(function (fileName) {
         self.bulkCopy(
           self.templatePath('../../app/templates', fileName),
           self.destinationPath(fileName)
@@ -30,7 +31,7 @@ module.exports = module.exports = generators.Base.extend({
       });
     },
 
-    updatePackageJson: function() {
+    updatePackageJson: function () {
       var self = this;
       var dest = require(self.destinationPath('package.json'));
       var source = require(self.templatePath('../../app/templates/package.json'));
@@ -41,11 +42,11 @@ module.exports = module.exports = generators.Base.extend({
       self._updatePackageJsonSection(source, dest, 'scripts');
 
       self.write(self.destinationPath('package.json'), JSON.stringify(dest, null, 2));
-    },
+    }
   },
 
   end: {
-    logMessage: function() {
+    logMessage: function () {
       this.log('');
       this.log('Your package has been updated to the latest React CDK version.');
       this.log('Apply following command to complete the update process.');

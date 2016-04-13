@@ -8,8 +8,20 @@
   "keywords": [
     "yeoman-generator"
   ],
+  "scripts": {
+    "lint": "eslint generators",
+    "lintfix": "eslint generators --fix",
+    "test": "npm run lint"
+  },
   "dependencies": {
     "lodash": "^4.10.0",
     "yeoman-generator": "^0.22.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^6.0.2",
+    "eslint": "^2.7.0",
+    "eslint-config-airbnb": "^7.0.0",
+    "eslint-plugin-jsx-a11y": "^0.6.2",
+    "eslint-plugin-react": "^4.3.0"
   }
 }

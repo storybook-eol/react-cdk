@@ -5,13 +5,13 @@ module.exports = module.exports = generators.Base.extend({
   constructor: function () {
     generators.Base.apply(this, arguments);
     this.argument('componentName', { type: String, required: true });
-    this.option('githubUrl', { type: String, desc: "URL of your github repo" });
-    this.option('description', { type: String, desc: "One line description about your component" });
+    this.option('githubUrl', { type: String, desc: 'URL of your github repo' });
+    this.option('description', { type: String, desc: 'One line description about your component' });
 
     this.componentName = this.componentName || '';
     this.prettyComponentName = this.componentName
       .split('-')
-      .map(function(word) {
+      .map(function (word) {
         return _.capitalize(word);
       })
       .join(' ');
@@ -21,7 +21,7 @@ module.exports = module.exports = generators.Base.extend({
   },
 
   configuring: {
-    copyDotFiles: function() {
+    copyDotFiles: function () {
       var self = this;
       [
         '.babelrc',
@@ -36,13 +36,13 @@ module.exports = module.exports = generators.Base.extend({
         '.scripts/publish_storybook.sh',
         '.scripts/user/prepublish.sh',
         '.scripts/user/pretest.js',
-        '.storybook/user/modify_webpack_config.js',
-      ].forEach(function(fileName) {
+        '.storybook/user/modify_webpack_config.js'
+      ].forEach(function (fileName) {
         self.copy(fileName, self.componentName + '/' + fileName);
       });
     },
 
-    copyPackageJson: function() {
+    copyPackageJson: function () {
       var self = this;
 
       self.template(
@@ -56,7 +56,7 @@ module.exports = module.exports = generators.Base.extend({
       );
     },
 
-    copyOtherFiles: function() {
+    copyOtherFiles: function () {
       var self = this;
       self.template(
         'README.md',
@@ -78,20 +78,20 @@ module.exports = module.exports = generators.Base.extend({
   },
 
   writing: {
-    copySrcFiles: function() {
+    copySrcFiles: function () {
       var self = this;
       [
         'src/index.js',
         'src/stories/index.js',
         'src/tests/index.js'
-      ].forEach(function(fileName) {
+      ].forEach(function (fileName) {
         self.copy(fileName, self.componentName + '/' + fileName);
       });
     }
   },
 
   end: {
-    logMessage: function() {
+    logMessage: function () {
       this.log('');
       this.log('Awesome! Your component "' + this.prettyComponentName + '" is ready!');
       this.log('Apply following commands to install dependencies.');
