@@ -72,6 +72,7 @@ npm run storybook
 
 The above command starts the Storybook console on [http://localhost:9010](http://localhost:9010/).
 
+![React Storybook](docs/storybook.png)
 
 > You can see changes you make while you are editing your component. Visit [React Storybook](https://github.com/kadirahq/react-storybook/) repo to learn more.
 
