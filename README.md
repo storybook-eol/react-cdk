@@ -6,6 +6,8 @@ React CDK is not just another React boilerplate. It’s much more than that, and
 
 With React CDK, you can focus on developing your React component or utility while React CDK takes care of all the other stuff.
 
+> Read why [Kadira created React CDK](https://voice.kadira.io/say-hello-to-react-cdk-97cff692e798#.2aaodkb6c).
+
 React CDK comes with following features:
 
 * Create a project with a single command.
