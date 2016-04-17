@@ -56,7 +56,7 @@ yo react-cdk react-wizard
 Visit that directory and install the NPM dependencies:
 
 ```
-cd react-cdk
+cd react-wizard
 npm install
 ```
 
