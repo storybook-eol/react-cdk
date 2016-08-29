@@ -209,8 +209,7 @@ You can change any of the dotfiles, including `.gitignore` and `.npmignore`. The
 
 ### Customize Storybook
 
-Sometimes you may need to customize your React Storybook. If you do, you’ll usually customize the `.storybook/webpack.config.js` file. We don’t allow changes to that file directly in React CDK.
-Instead, you can edit the `.storybook/user/modify_webpack_config.js` file.
+Sometimes you may need to customize your React Storybook. If you do, you’ll usually customize the `.storybook/webpack.config.js` file. Go ahead and do it.
 
 ### Add some pre-publish code
 
