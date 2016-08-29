@@ -1,5 +1,10 @@
 ## Changelog
 
+### v1.2.1
+30-August-2016
+
+* Had to remove some unused files from .storybook directory from the generator.
+
 ### v1.2.0
 30-August-2016
 
