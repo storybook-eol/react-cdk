@@ -37,14 +37,12 @@ module.exports = module.exports = generators.Base.extend({
       var self = this;
       [
         '.storybook/config.js',
-        '.storybook/webpack.config.js',
         '.scripts/mocha_runner.js',
         '.scripts/prepublish.sh',
         '.scripts/get_gh_pages_url.js',
         '.scripts/publish_storybook.sh',
         '.scripts/user/prepublish.sh',
         '.scripts/user/pretest.js',
-        '.storybook/user/modify_webpack_config.js'
       ].forEach(function (fileName) {
         self.copy(fileName, self.componentName + '/' + fileName);
       });
