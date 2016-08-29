@@ -1,5 +1,10 @@
 ## Changelog
 
+### v1.2.2
+30-August-2016
+
+* Remove some unused code from the update generator.
+
 ### v1.2.1
 30-August-2016
 
