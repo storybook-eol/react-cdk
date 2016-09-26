@@ -11,7 +11,7 @@ With React CDK, you can focus on developing your React component or utility whil
 React CDK comes with following features:
 
 * Create a project with a single command.
-* Write your component in ES2015+ syntax.
+* Write your component in [ES2016+ syntax](https://www.npmjs.com/package/babel-preset-react-app). 
 * Develop in a live environment with [React Storybook](https://github.com/kadirahq/react-storybook/).
 * Write tests with Mocha and [Enzyme](https://github.com/airbnb/enzyme).
 * Use ESLint with the [Airbnb style guide](https://github.com/airbnb/javascript).
