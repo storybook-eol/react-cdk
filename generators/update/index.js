@@ -18,6 +18,8 @@ module.exports = module.exports = generators.Base.extend({
       var self = this;
       [
         '.storybook/config.js',
+        '.eslintrc',
+        '.babelrc',
         '.scripts/mocha_runner.js',
         '.scripts/prepublish.sh',
         '.scripts/get_gh_pages_url.js',
