@@ -18,8 +18,6 @@ module.exports = module.exports = generators.Base.extend({
       var self = this;
       [
         '.storybook/config.js',
-        '.eslintrc',
-        '.babelrc',
         '.scripts/mocha_runner.js',
         '.scripts/prepublish.sh',
         '.scripts/get_gh_pages_url.js',
@@ -28,6 +26,16 @@ module.exports = module.exports = generators.Base.extend({
         self.bulkCopy(
           self.templatePath('../../app/templates', fileName),
           self.destinationPath(fileName)
+        );
+      });
+
+      [
+        'babelrc',
+        'eslintrc'
+      ].forEach(function (fileName) {
+        self.copy(
+          self.templatePath('../../app/templates', fileName),
+          self.destinationPath('.' + fileName)
         );
       });
     },
