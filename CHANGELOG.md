@@ -1,9 +1,13 @@
 ## Changelog
 
-### v2.0.1
+### v2.0.2
 26-August-2016
 
 Update .eslintrc and .babelrc along with the React CDK update process.
+
+### v2.0.1
+
+Invalid Release.
 
 ### v2.0.0
 26-August-2016
