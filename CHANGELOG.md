@@ -1,5 +1,14 @@
 ## Changelog
 
+### v2.0.0
+26-August-2016
+
+Update all the dependencies to the latest and change the dev environment slightly.
+Here are some key changes:
+
+* Use FB's [react-app](https://www.npmjs.com/package/babel-preset-react-app) babel preset.
+* Use the latest airbnb's eslint config(v2.0.0) which some minor overrides.
+
 ### v1.2.2
 30-August-2016
 
