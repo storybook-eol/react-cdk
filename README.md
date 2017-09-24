@@ -1,8 +1,10 @@
 # React CDK
 
+[![Storybook Slack](https://now-examples-slackin-nqnzoygycp.now.sh/badge.svg)](https://now-examples-slackin-nqnzoygycp.now.sh/)
+
 ### Component Development Kit for React
 
-##### We are looking for an active maintainer for this repository. React CDK has been put on hold and may become deprecated in the future so our core team can focus on Storybook. If you are interested, please contact Norbert in the Storybook Slack.
+##### We are looking for an active maintainer for this repository. React CDK has been put on hold and may become deprecated in the future so our core team can focus on Storybook. If you are interested, please contact us in the [Storybook Slack](https://now-examples-slackin-nqnzoygycp.now.sh/).
 
 React CDK is not just another React boilerplate. With React CDK, you can focus on developing your React component or utility while React CDK takes care of all the other stuff.
 
