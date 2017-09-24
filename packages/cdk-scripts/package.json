@@ -1,0 +1,24 @@
+{
+  "name": "@storybook/cdk-scripts",
+  "version": "0.1.0-alpha.45",
+  "description": "custom cra scripts for react-cdk",
+  "bin": {
+    "cdk-scripts": "./bin/cdk-scripts.js"
+  },
+  "scripts": {
+    "build": "rm *.tgz -rf && npm pack && node rebuild.js && sh build-sample.sh",
+    "dev": "nodemon --config .dev/nodemon.json -x 'npm run build'"
+  },
+  "dependencies": {
+    "@storybook/cli": "^3.2.9",
+    "chalk": "^2.1.0",
+    "fs-extra": "^4.0.2",
+    "react-scripts": "^1.0.13",
+    "shelljs": "^0.7.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  },
+  "author": "UsulPro",
+  "license": "MIT"
+}

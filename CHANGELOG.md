@@ -1,5 +1,13 @@
 ## Changelog
 
+### v3.0.0-alpha.0
+24-September-2017
+
+Work for updating to version 3 is started
+
+* Add roadmap.md
+* Init monorepo
+
 ### v2.0.2
 26-August-2016
 
