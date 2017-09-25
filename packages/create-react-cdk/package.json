@@ -1,5 +1,8 @@
 {
   "name": "create-react-cdk",
   "version": "0.1.0-alpha.0",
-  "description": "CLI for react-cdk"
+  "description": "CLI for react-cdk",
+  "dependencies": {
+    "@storybook/cdk-scripts": "*"
+  }
 }

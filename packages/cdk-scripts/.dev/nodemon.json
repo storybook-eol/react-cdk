@@ -1,0 +1,9 @@
+{
+  "verbose": false,
+  "ignore": ["*.test.js"],
+  "watch": [
+      "scripts",
+      "bin"
+    ],
+  "ext": "js"
+}
