@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@storybook/cli": "^3.2.9",
+    "babel-cli": "^6.26.0",
     "chalk": "^2.1.0",
     "fs-extra": "^4.0.2",
     "react-scripts": "^1.0.13",

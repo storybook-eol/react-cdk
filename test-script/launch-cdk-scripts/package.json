@@ -1,6 +1,6 @@
 {
   "name": "launch-cdk-scripts",
-  "version": "0.0.0",
+  "version": "0.0.13",
   "private": true,
   "description": "test scripts",
   "dependencies": {
@@ -10,6 +10,9 @@
     "ver": "cdk-scripts ver",
     "welcome": "cdk-scripts welcome",
     "lint": "cdk-scripts lint",
-    "fake": "cdk-scripts zZZ"
+    "fake": "cdk-scripts zZZ",
+    "prepublish": "cdk-scripts prepublish",
+    "prepack": "npm run --silent prepublish",
+    "report": "cdk-scripts report"
   }
 }

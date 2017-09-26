@@ -7,12 +7,26 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "cdk-scripts",
+      "name": "launch cdk scripts: bin",
       "cwd": "${workspaceRoot}/test-script/launch-cdk-scripts",
       "program": "${workspaceRoot}/test-script/launch-cdk-scripts/node_modules/.bin/cdk-scripts",
       "args": [
-        "verz"
+        "ver"
       ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "launch cdk scripts: prepublish",
+      "cwd": "${workspaceRoot}/test-script/launch-cdk-scripts",
+      "program": "${workspaceRoot}/packages/cdk-scripts/scripts/prepublish.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "launch cdk scripts: report",
+      "cwd": "${workspaceRoot}/test-script/launch-cdk-scripts",
+      "program": "${workspaceRoot}/packages/cdk-scripts/scripts/report.js"
     },
     {
       "type": "node",

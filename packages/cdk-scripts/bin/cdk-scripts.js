@@ -27,25 +27,11 @@ try {
   process.exit(1);
 }
 
-
-shell.echo(chalk.yellow(`
-
-you have ran cdk-script:
-${script}
-with args:
-${scriptArgs}
-in folder:
-${process.cwd()}
-(appDirectory)
-${appDirectory}
-scriptPath:
-${scriptPath}
-`));
-
-
 const result = childProcess.spawnSync('node', [scriptPath], {
   stdio: [0, 1, 2],
 });
 
-console.log(result.status);
-console.log(result.error);
+if (result.status) {
+  const report = require('../scripts/report');
+  report(script, scriptArgs);
+}
