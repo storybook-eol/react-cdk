@@ -1,13 +1,13 @@
 {
   "name": "@storybook/cdk-scripts",
-  "version": "0.1.1-alpha.1",
+  "version": "0.1.1-alpha.2",
   "description": "custom cra scripts for react-cdk",
   "bin": {
     "cdk-scripts": "./bin/cdk-scripts.js"
   },
   "scripts": {
-    "build": "rm *.tgz -rf && npm pack && node rebuild.js && sh build-sample.sh",
-    "dev": "nodemon --config .dev/nodemon.json -x 'npm run build'"
+    "build": "node ./.dev/pack.js",
+    "dev": "nodemon --config .dev/nodemon.json -x 'yarn build'"
   },
   "dependencies": {
     "@storybook/cli": "^3.2.9",

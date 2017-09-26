@@ -3,7 +3,8 @@
   "ignore": ["*.test.js"],
   "watch": [
       "scripts",
-      "bin"
+      "bin",
+      "template"
     ],
   "ext": "js"
 }

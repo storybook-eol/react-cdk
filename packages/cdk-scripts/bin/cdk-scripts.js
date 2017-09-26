@@ -13,17 +13,20 @@ const script = args[0] || 'welcome';
 const scriptArgs = args.slice(1);
 
 const appDirectory = fs.realpathSync(process.cwd());
-const scriptPath = path.resolve(appDirectory, `../scripts/${script}.js`);
 
-if (!fs.existsSync(scriptPath)) {
+let scriptPath;
+try {
+  scriptPath = require.resolve(`../scripts/${script}`);
+} catch(err) {
   childProcess.spawnSync(
     'node',
     [require.resolve('../scripts/unknown'), script],
     {
       stdio: [0, 1, 2],
   });
-  process.exit(0);
+  process.exit(1);
 }
+
 
 shell.echo(chalk.yellow(`
 
@@ -41,7 +44,7 @@ ${scriptPath}
 
 
 const result = childProcess.spawnSync('node', [scriptPath], {
-  stdio: [0, 1, 2], // 'inherit'
+  stdio: [0, 1, 2],
 });
 
 console.log(result.status);

@@ -5,6 +5,9 @@ node_modules
 
 # testing
 coverage
+test-gen
+tarballs/**/*
+*.tgz
 
 # publishing
 dist

@@ -24,3 +24,5 @@ We welcome your contributions. There are many ways you can help us. This is few 
 Before you submit a new PR, make you to run `npm test`. Do not submit a PR if tests are failing. If you need any help, create an issue and ask.
 
 ## Development Guide
+
+see [development](docs/development.md)

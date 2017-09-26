@@ -8,10 +8,23 @@
       "type": "node",
       "request": "launch",
       "name": "cdk-scripts",
-      "program": "${workspaceRoot}/node_modules/.bin/cdk-scripts",
+      "cwd": "${workspaceRoot}/test-script/launch-cdk-scripts",
+      "program": "${workspaceRoot}/test-script/launch-cdk-scripts/node_modules/.bin/cdk-scripts",
       "args": [
-        "ver"
+        "verz"
       ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "pack.js",
+      "program": "${workspaceRoot}/packages/cdk-scripts/.dev/pack.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "test-cdk-scripts.js",
+      "program": "${workspaceRoot}/scripts/test-cdk-scripts.js"
     }
   ]
 }

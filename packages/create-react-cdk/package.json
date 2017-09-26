@@ -3,6 +3,6 @@
   "version": "0.1.0-alpha.0",
   "description": "CLI for react-cdk",
   "dependencies": {
-    "@storybook/cdk-scripts": "*"
+    "@storybook/cdk-scripts": "^0.1.1-alpha"
   }
 }

@@ -1,0 +1,19 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "taskName": "launch-cdk-scripts",
+      "type": "shell",
+      "command": "cd test-script/launch-cdk-scripts  && ls",
+      "problemMatcher": []
+    },
+    {
+      "taskName": "gen",
+      "type": "shell",
+      "command": "node ${workspaceRoot}/scripts/test-cdk-scripts.js",
+      "problemMatcher": []
+    }
+  ]
+}
