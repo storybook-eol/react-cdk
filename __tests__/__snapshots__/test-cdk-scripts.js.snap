@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test-gen/test-cdk-scripts 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "extension": "",
+      "name": ".babelrc",
+      "path": "test-gen/test-cdk-scripts/.babelrc",
+      "size": 144,
+      "type": "file",
+    },
+    Object {
+      "extension": "",
+      "name": ".gitignore",
+      "path": "test-gen/test-cdk-scripts/.gitignore",
+      "size": 570,
+      "type": "file",
+    },
+    Object {
+      "extension": "",
+      "name": ".npmignore",
+      "path": "test-gen/test-cdk-scripts/.npmignore",
+      "size": 28,
+      "type": "file",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "extension": ".js",
+          "name": "addons.js",
+          "path": "test-gen/test-cdk-scripts/.storybook/addons.js",
+          "size": 86,
+          "type": "file",
+        },
+        Object {
+          "extension": ".js",
+          "name": "config.js",
+          "path": "test-gen/test-cdk-scripts/.storybook/config.js",
+          "size": 136,
+          "type": "file",
+        },
+      ],
+      "name": ".storybook",
+      "path": "test-gen/test-cdk-scripts/.storybook",
+      "size": 222,
+      "type": "directory",
+    },
+    Object {
+      "extension": ".md",
+      "name": "README.md",
+      "path": "test-gen/test-cdk-scripts/README.md",
+      "size": 80,
+      "type": "file",
+    },
+    Object {
+      "extension": ".json",
+      "name": "package.json",
+      "path": "test-gen/test-cdk-scripts/package.json",
+      "size": 850,
+      "type": "file",
+    },
+    Object {
+      "children": Array [
+        Object {
+          "extension": ".css",
+          "name": "App.css",
+          "path": "test-gen/test-cdk-scripts/src/App.css",
+          "size": 377,
+          "type": "file",
+        },
+        Object {
+          "extension": ".js",
+          "name": "Header.js",
+          "path": "test-gen/test-cdk-scripts/src/Header.js",
+          "size": 280,
+          "type": "file",
+        },
+        Object {
+          "extension": ".js",
+          "name": "Header.test.js",
+          "path": "test-gen/test-cdk-scripts/src/Header.test.js",
+          "size": 235,
+          "type": "file",
+        },
+        Object {
+          "extension": ".js",
+          "name": "Page.js",
+          "path": "test-gen/test-cdk-scripts/src/Page.js",
+          "size": 245,
+          "type": "file",
+        },
+        Object {
+          "extension": ".js",
+          "name": "Page.test.js",
+          "path": "test-gen/test-cdk-scripts/src/Page.test.js",
+          "size": 232,
+          "type": "file",
+        },
+        Object {
+          "extension": ".svg",
+          "name": "logo.svg",
+          "path": "test-gen/test-cdk-scripts/src/logo.svg",
+          "size": 2671,
+          "type": "file",
+        },
+      ],
+      "name": "src",
+      "path": "test-gen/test-cdk-scripts/src",
+      "size": 4040,
+      "type": "directory",
+    },
+    Object {
+      "extension": ".lock",
+      "name": "yarn.lock",
+      "path": "test-gen/test-cdk-scripts/yarn.lock",
+      "size": 307685,
+      "type": "file",
+    },
+  ],
+  "name": "test-cdk-scripts",
+  "path": "./test-gen/test-cdk-scripts",
+  "size": 313619,
+  "type": "directory",
+}
+`;
+
+exports[`test-gen/test-cdk-scripts/dist 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "extension": ".js",
+      "name": "Header.js",
+      "path": "test-gen/test-cdk-scripts/dist/Header.js",
+      "size": 747,
+      "type": "file",
+    },
+    Object {
+      "extension": ".js",
+      "name": "Page.js",
+      "path": "test-gen/test-cdk-scripts/dist/Page.js",
+      "size": 666,
+      "type": "file",
+    },
+  ],
+  "name": "dist",
+  "path": "./test-gen/test-cdk-scripts/dist",
+  "size": 1413,
+  "type": "directory",
+}
+`;

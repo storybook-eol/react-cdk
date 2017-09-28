@@ -12,6 +12,7 @@ const args = [
   'src',
   '--ignore tests,stories,story.jsx,story.js,test.js',
   '--out-dir dist',
+  '--copy-files'
 ].join(' ');
 
 const cmd = `${babel} ${args}`;
