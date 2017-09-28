@@ -10,7 +10,7 @@
       "problemMatcher": []
     },
     {
-      "taskName": "gen",
+      "taskName": "Generate project from `ckd-scripts` tarball",
       "type": "shell",
       "command": "node ${workspaceRoot}/scripts/test-cdk-scripts.js",
       "problemMatcher": []

@@ -26,14 +26,14 @@ module.exports = function(
     template
   );
 
-  const args = `
-    CDK-Scripts was invoked with args:
-    appPath: ${appPath}
-    appName: ${appName}
-    verbose: ${verbose}
-    originalDirectory: ${originalDirectory}
-    template: ${template}
-  `;
+  // const args = `
+  //   CDK-Scripts was invoked with args:
+  //   appPath: ${appPath}
+  //   appName: ${appName}
+  //   verbose: ${verbose}
+  //   originalDirectory: ${originalDirectory}
+  //   template: ${template}
+  // `;
   const ownPackage = require(path.join(__dirname, '..', 'package.json'));
   const appPackage = require(path.join(appPath, 'package.json'));
   const ownPath = path.join(appPath, 'node_modules', ownPackage.name);
@@ -62,13 +62,12 @@ module.exports = function(
   appPackage.engines = {
     npm: '>=4.0.0', /** @todo check this field */
   };
+  /** Add scripts except prepublish and prepack to not trigger code compilation */
   appPackage.scripts = {
     'start': 'npm run storybook',
     'test': 'cdk-scripts test --env=jsdom',
     'lint': 'cdk-scripts lint',
     'lint:fix': 'cdk-scripts lint --fix',
-    'prepublish': 'cdk-scripts prepublish',
-    'prepack': 'npm run prepublish',
     'publish:local': 'npm pack',
     'deploy': 'cdk-scripts deploy',
   }
@@ -76,21 +75,35 @@ module.exports = function(
   /** Save package.json to the App folder */
   fs.writeJsonSync(path.join(appPath, 'package.json'), appPackage);
 
-  /** We need to change project template after 'react-scripts' */
-  fs.removeSync(path.join(appPath, 'public'));
-  fs.removeSync(path.join(appPath, 'src'));
-  fs.copySync(
-    path.join(ownPath, 'template'),
-    appPath
-  );
-
   /** Run getstorybook */
   const rez = childProcess.execFileSync(getstorybookPath, {
     cwd: appPath,
     stdio: [0, 1, 2],
   });
 
-  
+  /** We need to change project template after 'react-scripts' and `getstorybook` */
+  fs.removeSync(path.join(appPath, 'public'));
+  fs.removeSync(path.join(appPath, 'src'));
+  fs.copySync(
+    path.join(ownPath, 'template'),
+    appPath
+  );
+  /** rename .npmignore and .gitignore */
+  fs.moveSync(
+    path.join(appPath, '_npmignore'),
+    path.join(appPath, '.npmignore')
+  );
+  fs.moveSync(
+    path.join(appPath, '_gitignore'),
+    path.join(appPath, '.gitignore')
+  );
+
+  /** Add prepublish and prepack scripts to package.json */
+  appPackage.scripts = {
+    'prepublish': 'cdk-scripts prepublish',
+    'prepack': 'npm run prepublish',
+  }
+  fs.writeJsonSync(path.join(appPath, 'package.json'), appPackage, { spaces: 2 });
 
 
 }
