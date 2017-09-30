@@ -41,10 +41,10 @@ shell.exec(exec);
 const isCreated = fs.pathExistsSync(`${tarballPath}/${tarballName}`);
 
 if (isCreated) {
-  shell.echo(chalk.white('\n=> tarball is created:'));
+  shell.echo(chalk.white('\n=> tarball is created:\n'));
   shell.echo(chalk.cyan(tarballName));
   shell.echo();
 } else {
-  shell.echo(chalk.red('\n=> tarball is not created :('));
+  shell.echo(chalk.red('\n=> tarball is not created :(\n'));
   shell.echo();
 }

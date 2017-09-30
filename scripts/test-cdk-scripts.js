@@ -30,5 +30,6 @@ shell.exec(exec, function(code, stdout, stderr) {
   } else {
     console.log(chalk.red(`something's gone wrong...`));
     console.log(chalk.white(`exit code: ${code}`));
+    shell.exit(code);
   }
 });

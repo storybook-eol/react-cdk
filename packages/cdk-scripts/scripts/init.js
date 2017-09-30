@@ -46,7 +46,7 @@ module.exports = function(
   appPackage.devDependencies = appPackage.dependencies;
   appPackage.devDependencies['react-scripts'] = '*';
   appPackage.peerDependencies = appPackage.peerDependencies || {};
-  appPackage.peerDependencies.react = '>=0.15.0';
+  appPackage.peerDependencies.react = '>=15.0.0';
   appPackage.dependencies = {};
   appPackage.description = `${appName} development kit`; /** @todo check this field */
   appPackage.repository = {
@@ -99,11 +99,8 @@ module.exports = function(
   );
 
   /** Add prepublish and prepack scripts to package.json */
-  appPackage.scripts = {
-    'prepublish': 'cdk-scripts prepublish',
-    'prepack': 'npm run prepublish',
-  }
+  appPackage.scripts['prepublish'] = 'cdk-scripts prepublish';
+  appPackage.scripts['prepack'] = 'npm run prepublish';
   fs.writeJsonSync(path.join(appPath, 'package.json'), appPackage, { spaces: 2 });
-
 
 }

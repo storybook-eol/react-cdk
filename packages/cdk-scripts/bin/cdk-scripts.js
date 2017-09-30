@@ -27,7 +27,7 @@ try {
   process.exit(1);
 }
 
-const result = childProcess.spawnSync('node', [scriptPath], {
+const result = childProcess.spawnSync('node', [scriptPath, ...scriptArgs], {
   stdio: [0, 1, 2],
 });
 

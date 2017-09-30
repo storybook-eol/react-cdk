@@ -28,7 +28,7 @@ try {
   );
   shell.echo(chalk.gray('\n=> Transpiling completed.\n'));
 } catch (err) {
-  shell.echo(chalk.gray('\n=> Transpilation terminated with error.\n'));
+  shell.echo(chalk.gray('\n=> Transpilation terminated with error.'));
   shell.exit(err.status);
 
 }

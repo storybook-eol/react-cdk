@@ -57,7 +57,7 @@ Object {
       "extension": ".json",
       "name": "package.json",
       "path": "test-gen/test-cdk-scripts/package.json",
-      "size": 850,
+      "size": 1071,
       "type": "file",
     },
     Object {
@@ -114,13 +114,13 @@ Object {
       "extension": ".lock",
       "name": "yarn.lock",
       "path": "test-gen/test-cdk-scripts/yarn.lock",
-      "size": 307685,
+      "size": 307787,
       "type": "file",
     },
   ],
   "name": "test-cdk-scripts",
   "path": "./test-gen/test-cdk-scripts",
-  "size": 313619,
+  "size": 313942,
   "type": "directory",
 }
 `;
@@ -128,6 +128,13 @@ Object {
 exports[`test-gen/test-cdk-scripts/dist 1`] = `
 Object {
   "children": Array [
+    Object {
+      "extension": ".css",
+      "name": "App.css",
+      "path": "test-gen/test-cdk-scripts/dist/App.css",
+      "size": 377,
+      "type": "file",
+    },
     Object {
       "extension": ".js",
       "name": "Header.js",
@@ -142,10 +149,17 @@ Object {
       "size": 666,
       "type": "file",
     },
+    Object {
+      "extension": ".svg",
+      "name": "logo.svg",
+      "path": "test-gen/test-cdk-scripts/dist/logo.svg",
+      "size": 2671,
+      "type": "file",
+    },
   ],
   "name": "dist",
   "path": "./test-gen/test-cdk-scripts/dist",
-  "size": 1413,
+  "size": 4461,
   "type": "directory",
 }
 `;
