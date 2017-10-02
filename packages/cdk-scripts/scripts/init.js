@@ -103,4 +103,7 @@ module.exports = function(
   appPackage.scripts['prepack'] = 'npm run prepublish';
   fs.writeJsonSync(path.join(appPath, 'package.json'), appPackage, { spaces: 2 });
 
+  console.log('CDK-SCRIPT-TEMPLATE:');
+  console.log(process.env.CDK_SCRIPT_TEMPLATE);
+
 }

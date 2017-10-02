@@ -31,6 +31,20 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "launch create-react-cdk",
+      "cwd": "${workspaceRoot}/test-gen",
+      "program": "${workspaceRoot}/packages/create-react-cdk/index.js",
+      "args": [
+        "test-create-cdk",
+        "--with",
+        "user-template",
+        "--testing-scripts",
+        "${workspaceRoot}/tarballs/cdk-scripts.0.1.1-alpha.2.62.tgz"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "pack.js",
       "program": "${workspaceRoot}/packages/cdk-scripts/.dev/pack.js"
     },

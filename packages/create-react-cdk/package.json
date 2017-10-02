@@ -2,7 +2,16 @@
   "name": "create-react-cdk",
   "version": "0.1.0-alpha.0",
   "description": "CLI for react-cdk",
+  "bin": {
+    "create-react-cdk": "./index.js"
+  },
   "dependencies": {
-    "@storybook/cdk-scripts": "^0.1.1-alpha"
+    "commander": "^2.11.0",
+    "create-react-app": "^1.4.1",
+    "fs-extra": "^4.0.2"
+  },
+  "devDependencies": {
+    "chalk": "^2.1.0",
+    "shelljs": "^0.7.8"
   }
 }

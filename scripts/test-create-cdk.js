@@ -10,23 +10,27 @@ if (!tarballs.length) shell.exit(1);
 
 const packPath = tarballs[0];
 
-const testPath = path.resolve(__dirname, '../test-gen/test-cdk-scripts');
-const exec = `create-react-app ${testPath} --scripts-version ${packPath}`
+const testPath = path.resolve(__dirname, '../test-gen/');
+const binPath = path.resolve(__dirname, '../node_modules/.bin/create-react-cdk');
+const exec = `${binPath} test-create-cdk --with package --testing-scripts ${packPath}`;
 
 
-shell.rm('-rf', testPath);
+shell.rm('-rf', path.join(testPath, 'test-create-cdk'));
 
+
+console.log();
+console.log(chalk.gray(`cd ${testPath}`));
 console.log();
 console.log(chalk.gray(exec));
 console.log();
 
-env = process.env;
-env.CDK_SCRIPT_TEMPLATE = 'default template';
 
-shell.exec(exec, env, function(code, stdout, stderr) {
+shell.cd(testPath);
+
+shell.exec(exec, function(code, stdout, stderr) {
   if( code === 0) {
     console.log(chalk.yellow(`cdk-scripts successfully generated the project at ${testPath}`));
-    const relativePath = path.relative(shell.pwd().toString(), testPath);
+    const relativePath = path.relative(shell.pwd().toString(), path.join(testPath, 'create-react-cdk'));
     console.log(chalk.yellow(`\ncontinue testing by typing:`));
     console.log(chalk.yellow(`\n$ cd ${relativePath}`));
     console.log(chalk.yellow(`$ yarn storybook`));
