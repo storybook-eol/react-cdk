@@ -6,6 +6,9 @@
 
 ##### We are looking for an active maintainer for this repository. React CDK has been put on hold and may become deprecated in the future so our core team can focus on Storybook. If you are interested, please contact us in the [Storybook Slack](https://now-examples-slackin-nqnzoygycp.now.sh/).
 
+##### React-CDK v.3 development is started in this branch https://github.com/storybooks/react-cdk/tree/v3-develop WIP. Any contribution are very Welcome! You might want to check the [Roadmap](https://github.com/storybooks/react-cdk/blob/v3-develop/ROADMAP.md) and the [Development Guide](https://github.com/storybooks/react-cdk/blob/v3-develop/docs/development.md)
+
+
 React CDK is not just another React boilerplate. With React CDK, you can focus on developing your React component or utility while React CDK takes care of all the other stuff.
 
 > Read why [Kadira created React CDK](https://voice.kadira.io/say-hello-to-react-cdk-97cff692e798#.2aaodkb6c).
