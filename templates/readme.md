@@ -1,3 +1,3 @@
 # Templates
 
-This folder is contain React-CDK templates
+This folder contains React-CDK templates

@@ -1,3 +1,5 @@
+# Development guide
+
 ## How it works
 
 It consists of these main packages:
@@ -12,22 +14,32 @@ A custom CRA scripts that 1) wraps original `react-scripts`, 2) launch `@storybo
 
 - cdk-template
 
-Default `react-cdk` template. Provides some some additional setting and overrides of original CRA template.
+Default `react-cdk` template. Provides some additional setting and overrides of original CRA template.
 
 ### Usage: 
 
-`create-react-cdk <project-directory> [options]`
-  or:
-`yarn create react-cdk <project-directory> [options]`
-  or:
+1) Install it globally via `npm i -g create-react-cdk` and run to create a project folder:
+
+  `create-react-cdk <project-directory> [options]`
+
+2) If you're using Yarn package manager, you don't need to install it before. Just use `yarn create` command:
+
+  `yarn create react-cdk <project-directory> [options]`
+
+*(it will always install the latest version)*
+
+3) Or same with `npx` 
+
 `npx create-react-cdk <project-directory> [options]`
+
+*(add `--ignore-existing` flag to be sure you are using the latest version)*
 
 run `yarn create-react-cdk --help` in the root of project for CLI details
 
 ### Keeping up-to-date
 
-CRA internally always installs the latest version of scripts. So you don't need to update it each time.
-Since we rely CRA and `react-scripts` settings and use the `@storybook/cli` to add optimized for CRA Storybook configuration, we can focus only on `react-cdk` features.
+CRA internally always installs the latest version of scripts. So you don't need to update it each time after it becomes stable.
+Since we rely on CRA and `react-scripts` settings and use the `@storybook/cli` to add optimized for CRA Storybook configuration, we can focus only on `react-cdk` features.
 
 ## How to generate projects locally
 
@@ -37,7 +49,7 @@ You can run scripts from `.scripts` folder. Each will generate a project in the 
 
 - test-create-cdk - via `./package/create-react-cdk`
 
-This project isn't included to yarn workspace and you can check it out as a usual project
+A generated project keeps all dependencies in the own `node_modules` folder and can be checked out as a usual project
 
 **Note**: you need to build tarball for `cdk-scripts` on each change (see [How to build tarballs](how-to-build-tarballs))
 
@@ -65,9 +77,11 @@ At this moment there are two testing scripts:
 
 ## How to run `cdk-scripts` commands
 
-`cd ./test-script/launch-cdk-scripts`
+Though we can run these scripts directly from `cdk-scripts` folder, it has no sense since they are designed to work with generated projects. So we need to provide such environment for them:
 
-This folder simulates generated project but thanks to Yarn workspace linked to the `./packages/cdk-scripts`. You can edit `./packages/cdk-scripts` files and execute them from this folder.
+`cd test-script/launch-cdk-scripts`
+
+This folder simulates generated project but thanks to Yarn workspace linked to the `./packages/cdk-scripts`. So you can edit `./packages/cdk-scripts` files and execute them from this folder.
 
 
 ## How to build tarballs
@@ -82,8 +96,12 @@ The tarball will be located in `tarballs/cdk-scripts.**.tgz`
 
 We need to change file name for each build in order to use with CRA (we do automatically with `packages/cdk-scripts/.dev/pack.js` script)
 
+
 ## How to debug
 
 if you're using VSCode you can run scripts in the debug mode. For some of them there are tasks in configuration. Open `DEBUG` view on you left panel and select the script you want to launch. Open `.vscode/launch.json` to explore details and create other tasks.
 
 
+## Roadmap
+
+See implemented and upcoming steps in the project [Roadmap](../ROADMAP.md)
