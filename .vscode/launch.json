@@ -31,7 +31,7 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "launch create-react-cdk",
+      "name": "generate: create-react-cdk",
       "cwd": "${workspaceRoot}/test-gen",
       "program": "${workspaceRoot}/packages/create-react-cdk/index.js",
       "args": [
@@ -45,13 +45,13 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "pack.js",
+      "name": "dev: pack.js",
       "program": "${workspaceRoot}/packages/cdk-scripts/.dev/pack.js"
     },
     {
       "type": "node",
       "request": "launch",
-      "name": "test-cdk-scripts.js",
+      "name": "dev: test-cdk-scripts.js",
       "program": "${workspaceRoot}/scripts/test-cdk-scripts.js"
     }
   ]

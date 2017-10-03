@@ -13,5 +13,8 @@
   "devDependencies": {
     "chalk": "^2.1.0",
     "shelljs": "^0.7.8"
+  },
+  "scripts": {
+    "build": "yarn pack --filename ../../tarballs/create-react-cdk.tgz"
   }
 }

@@ -29,7 +29,7 @@ shell.cd(testPath);
 
 shell.exec(exec, function(code, stdout, stderr) {
   if( code === 0) {
-    console.log(chalk.yellow(`cdk-scripts successfully generated the project at ${testPath}`));
+    console.log(chalk.yellow(`create-react-cdk successfully generated the project at ${testPath}`));
     const relativePath = path.relative(shell.pwd().toString(), path.join(testPath, 'create-react-cdk'));
     console.log(chalk.yellow(`\ncontinue testing by typing:`));
     console.log(chalk.yellow(`\n$ cd ${relativePath}`));

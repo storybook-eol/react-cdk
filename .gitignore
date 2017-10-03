@@ -5,15 +5,15 @@ node_modules
 
 # testing
 coverage
-test-gen
-tarballs/**/*
+test-gen/**/
+!test-gen/readme.md
+tarballs/**/*.tgz
 *.tgz
 
 # publishing
 dist
 
 # development
-test-cdk-scripts
 
 # misc
 .DS_Store
