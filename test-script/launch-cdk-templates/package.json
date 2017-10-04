@@ -1,0 +1,13 @@
+{
+  "name": "launch-cdk-templates",
+  "version": "0.0.13",
+  "private": true,
+  "description": "test scripts",
+  "dependencies": {
+    "@storybook/cdk-template-default": "/home/usulpro/WebDev/_CDK/react-cdk/tarballs/cdk-template-default.tgz"
+  },
+  "scripts": {
+    "test:add": "node ./scripts/add-template",
+    "test:remove": "npm rm cdk-template-default"
+  }
+}

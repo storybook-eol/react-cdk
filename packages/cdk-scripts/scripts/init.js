@@ -4,6 +4,8 @@ const path = require('path');
 const childProcess = require('child_process');
 const fs = require('fs-extra');
 const reactScriptsInit = require('react-scripts/scripts/init.js');
+const getPackage = require('./utils/getPackage');
+const templatesAPI = require('./utils/templatesAPI');
 
 module.exports = function(
   appPath,

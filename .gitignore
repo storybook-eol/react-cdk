@@ -9,6 +9,7 @@ test-gen/**/
 !test-gen/readme.md
 tarballs/**/*.tgz
 *.tgz
+.yarn-cache
 
 # publishing
 dist

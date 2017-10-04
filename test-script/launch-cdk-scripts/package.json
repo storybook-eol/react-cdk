@@ -4,7 +4,7 @@
   "private": true,
   "description": "test scripts",
   "dependencies": {
-    "@storybook/cdk-scripts": "^0.1.1-alpha"
+    "@storybook/cdk-scripts": "0.2.0-alpha.0"
   },
   "scripts": {
     "ver": "cdk-scripts ver",

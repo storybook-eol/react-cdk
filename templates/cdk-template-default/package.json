@@ -1,0 +1,18 @@
+{
+  "name": "@storybook/cdk-template-default",
+  "version": "0.2.0-alpha.4",
+  "description": "default template for react-cdk",
+  "main": "./index.js",
+  "bin": {
+    "cdk-template-name": "./bin/cdk-template-name.js"
+  },
+  "scripts": {
+    "build": "node ./.dev/pack.js"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "author": "UsulPro",
+  "license": "MIT"
+}

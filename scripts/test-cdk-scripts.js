@@ -21,7 +21,7 @@ console.log(chalk.gray(exec));
 console.log();
 
 env = process.env;
-env.CDK_SCRIPT_TEMPLATE = 'default template';
+env.CDK_SCRIPT_TEMPLATE = './tarballs/cdk-template-default.tgz';
 
 shell.exec(exec, env, function(code, stdout, stderr) {
   if( code === 0) {

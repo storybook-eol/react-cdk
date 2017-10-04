@@ -1,6 +1,6 @@
 {
   "name": "create-react-cdk",
-  "version": "0.1.0-alpha.0",
+  "version": "0.2.0-alpha.0",
   "description": "CLI for react-cdk",
   "bin": {
     "create-react-cdk": "./index.js"
