@@ -6,11 +6,14 @@ It consists of these main packages:
 
 - create-react-cdk
 
-A CLI tool that runs CRA internally with `--scripts-version cdk-scripts`
+A CLI tool that runs CRA internally with `--scripts-version cdk-scripts` option
 
 - cdk-scripts
 
-A custom CRA scripts that 1) wraps original `react-scripts`, 2) launch `@storybook/cli`, 3) Apply specified custom template over default CRA generated project
+A custom CRA scripts that 
+  1) wraps original `react-scripts`, 
+  2) launch `@storybook/cli`, 
+  3) Apply specified custom template over default CRA generated project
 
 - cdk-template
 
@@ -51,7 +54,7 @@ You can run scripts from `.scripts` folder. Each will generate a project in the 
 
 A generated project keeps all dependencies in the own `node_modules` folder and can be checked out as a usual project
 
-**Note**: you need to build tarball for `cdk-scripts` on each change (see [How to build tarballs](how-to-build-tarballs))
+**Note**: you need to build tarball for `cdk-scripts` on each change (see [How to build tarballs](#how-to-build-tarballs))
 
 
 ## How to test with Jest:

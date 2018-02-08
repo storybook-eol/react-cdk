@@ -2,10 +2,6 @@
 # yarn lockfile v1
 
 
-"@storybook/cdk-template-default@/home/usulpro/WebDev/_CDK/react-cdk/tarballs/cdk-template-default.tgz":
-  version "0.2.0-alpha.2"
-  resolved "/home/usulpro/WebDev/_CDK/react-cdk/tarballs/cdk-template-default.tgz#29ac0fbb83a291b115455f2493a70112bbed2715"
-
 "@storybook/cli@^3.2.9":
   version "3.2.12"
   resolved "https://registry.yarnpkg.com/@storybook/cli/-/cli-3.2.12.tgz#c8e990ed5e4cecbe9a34c545d41c0b53810eaeab"
